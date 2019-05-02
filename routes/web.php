@@ -17,4 +17,6 @@ $router->get('/', function () use ($router) {
 
 $router->group(['prefix' => 'api-ibm'], function() use ($router){
     $router->get('/users', 'Controller@showUsers');
+    $router->post('/adduser', 'Controller@addUser');
+    $router->get('/showuser/{id}', 'Controller@showOneUser');
 });
